@@ -1,0 +1,25 @@
+{
+  "name": "i18nl",
+  "version": "0.1.0",
+  "description": "i18n-loader",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldEli/i18nl.git"
+  },
+  "keywords": [
+    "i18n",
+    "loader"
+  ],
+  "author": "miaoyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goldEli/i18nl/issues"
+  },
+  "homepage": "https://github.com/goldEli/i18nl#readme"
+}
