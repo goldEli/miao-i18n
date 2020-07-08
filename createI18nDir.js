@@ -1,5 +1,5 @@
-const fs = require("fs");
 const c = require("./config");
+const utils = require("./utils")
 
 const dirs = [c.i18nPath, c.zhPath, c.enPath];
 const files = [
@@ -8,11 +8,10 @@ const files = [
   {
     file: c.i18nJsPath,
     content: `
+import zh  from "./zh/data.json"
+import en  from "./en/data.json"
 
-const zh = require("./zh/data.json");
-const en = require("./en/data.json");
-
-module.exports = function (lang) {
+function i18n(lang) {
   let data;
   switch (lang) {
     case "zh":
@@ -28,29 +27,19 @@ module.exports = function (lang) {
   }
   window.$i18n = data;
 };
+
+i18n("en")
   `,
   },
 ];
 
-function createFolder(dir) {
-  if (fs.existsSync(dir)) return;
-
-  fs.mkdirSync(dir);
-  console.log("文件夹创建成功：", dir);
-}
-
-function createFile(file, content) {
-  if (fs.existsSync(file)) return;
-  fs.writeFileSync(file, content);
-  console.log("文件创建成功：", file);
-}
 
 function main() {
   dirs.forEach((dir) => {
-    createFolder(dir);
+    utils.createFolder(dir);
   });
   files.forEach((item) => {
-    createFile(item.file, item.content);
+    utils.createFile(item.file, item.content);
   });
 }
 
