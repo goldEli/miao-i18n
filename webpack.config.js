@@ -1,9 +1,11 @@
 const path = require("path");
 module.exports = {
-  entry: "./index.js",
+  entry: "./lib/index.js",
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "lib"),
+    path: path.resolve(__dirname, "dist"),
+    library: 'myLib',
+    libraryTarget: 'umd',
   },
   target: 'node',
   node: {
