@@ -5,6 +5,7 @@ module.exports = {
     filename: "index.js",
     path: path.resolve(__dirname, "lib"),
   },
+  target: 'node',
   node: {
     fs: "empty",
   }
