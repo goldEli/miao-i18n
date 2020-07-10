@@ -141,9 +141,9 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <p>前端</p>
-      <p>后算</p>
-      <p>算法</p>
+      <p>苹果</p>
+      <p>香蕉</p>
+      <p>葡萄</p>
     </div>
   );
 }
@@ -152,7 +152,7 @@ export default App;
 
 保存文件，查看浏览器：
 
-![](https://user-gold-cdn.xitu.io/2020/7/10/17336fdd143ce816?w=180&h=110&f=png&s=1277)
+![](https://user-gold-cdn.xitu.io/2020/7/10/17337812b70716e8?w=181&h=102&f=png&s=1193)
 
 此时，资源文件已经自动生成了，打开 `src/i18n/en/data.json` 或者 `src/i18n/zh/data.json` 查看：
 
