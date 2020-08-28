@@ -15,7 +15,12 @@
   "files": [
     "dist"
   ],
-  "publishConfig": { "registry": "https://www.npmjs.com/package/miao-i18n" },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "tnpm": {
+    "mode": "npm"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
